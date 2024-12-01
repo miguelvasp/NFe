@@ -1,0 +1,1955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8E7294A-65F7-41B6-8E30-328ECF484F1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NotaEletronica</RootNamespace>
+    <AssemblyName>NotaEletronica</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>611866C41BD54C3D22E5B8C7C1BBD758F0627180</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NFeApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Boleto.Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=53630c3583b7ed5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.0.5\lib\net45\HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\boletonet-master\src\packages\Microsoft.SqlServer.Types.11.0.0\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe_Util_2G, Version=4.0.17.2, Culture=neutral, PublicKeyToken=6369240506ce0263, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NFe_Util_2G.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Boletos\NReco.PdfGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLBoletos.cs" />
+    <Compile Include="BLL\BLEmail.cs" />
+    <Compile Include="BLL\BLNFe40.cs" />
+    <Compile Include="DAL\BoletoConfiguracoesDAL.cs" />
+    <Compile Include="DAL\BoletoDAL.cs" />
+    <Compile Include="DAL\BoletoDocumentoDAL.cs" />
+    <Compile Include="DAL\CESTDAL.cs" />
+    <Compile Include="DAL\CFOPDAL.cs" />
+    <Compile Include="DAL\GenericRepository.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\NCMDAL.cs" />
+    <Compile Include="DAL\NFeDAL.cs" />
+    <Compile Include="DAL\NFeEmailDAL.cs" />
+    <Compile Include="DAL\NFeEmitenteDAL.cs" />
+    <Compile Include="DAL\NFeInutilizaDAL.cs" />
+    <Compile Include="DAL\NFeMunicipioDAL.cs" />
+    <Compile Include="DAL\NFeParametroDAL.cs" />
+    <Compile Include="DAL\NFeProdutoDAL.cs" />
+    <Compile Include="DAL\NFeVencimentosDAL.cs" />
+    <Compile Include="DAL\NFeXMLDAL.cs" />
+    <Compile Include="DAL\ObjDAL.cs" />
+    <Compile Include="DAL\ObjReturn.cs" />
+    <Compile Include="DAL\PaisDAL.cs" />
+    <Compile Include="DAL\PesquisaDAL.cs" />
+    <Compile Include="DAL\Repository.cs" />
+    <Compile Include="DAL\SQLDataLayer.cs" />
+    <Compile Include="DAL\TEmailDAL.cs" />
+    <Compile Include="Forms\frmAguarde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAguarde.Designer.cs">
+      <DependentUpon>frmAguarde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBancoCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBancoCad.Designer.cs">
+      <DependentUpon>frmBancoCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBoleto.Designer.cs">
+      <DependentUpon>frmBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBoletoCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBoletoCad.Designer.cs">
+      <DependentUpon>frmBoletoCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCancelamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCancelamento.Designer.cs">
+      <DependentUpon>frmCancelamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCartaCorrecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCartaCorrecao.Designer.cs">
+      <DependentUpon>frmCartaCorrecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEnviaEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEnviaEmail.Designer.cs">
+      <DependentUpon>frmEnviaEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmErro.Designer.cs">
+      <DependentUpon>frmErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInutilizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInutilizar.Designer.cs">
+      <DependentUpon>frmInutilizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListaEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListaEmail.Designer.cs">
+      <DependentUpon>frmListaEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMsgErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMsgErro.Designer.cs">
+      <DependentUpon>frmMsgErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNFeCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNFeCad.Designer.cs">
+      <DependentUpon>frmNFeCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNFeProdutoCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNFeProdutoCad.Designer.cs">
+      <DependentUpon>frmNFeProdutoCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmParams.Designer.cs">
+      <DependentUpon>frmParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcessa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcessa.Designer.cs">
+      <DependentUpon>frmProcessa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRecomendacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRecomendacoes.Designer.cs">
+      <DependentUpon>frmRecomendacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerBoleto.Designer.cs">
+      <DependentUpon>frmVerBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVisualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVisualizar.Designer.cs">
+      <DependentUpon>frmVisualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Boleto.cs" />
+    <Compile Include="Models\BoletoConfiguracoes.cs" />
+    <Compile Include="Models\BoletoDocumento.cs" />
+    <Compile Include="Models\BoletoModel.cs" />
+    <Compile Include="Models\CEST.cs" />
+    <Compile Include="Models\CFOP.cs" />
+    <Compile Include="Models\ComboItem.cs" />
+    <Compile Include="Models\DB_ERPContext.cs" />
+    <Compile Include="Models\FiltroRelatorio.cs" />
+    <Compile Include="Models\NCM.cs" />
+    <Compile Include="Models\NFe.cs" />
+    <Compile Include="Models\NFeEmail.cs" />
+    <Compile Include="Models\NFeEmitente.cs" />
+    <Compile Include="Models\NFeInutiliza.cs" />
+    <Compile Include="Models\NFeMunicipio.cs" />
+    <Compile Include="Models\NFeParametro.cs" />
+    <Compile Include="Models\NFeProduto.cs" />
+    <Compile Include="Models\NFeVencimentos.cs" />
+    <Compile Include="Models\NFeXML.cs" />
+    <Compile Include="Models\Pais.cs" />
+    <Compile Include="Models\TEmail.cs" />
+    <Compile Include="Models\ideNFe.cs" />
+    <Compile Include="Models\PesquisaGrid.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Boletos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Boletos.rpt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Util\Combos.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Util\UtilBradescoCobranca400.cs" />
+    <Compile Include="Util\UtilBradescoCobranca240.cs" />
+    <Compile Include="Util\ValidadorNFe.cs" />
+    <EmbeddedResource Include="Forms\frmAguarde.resx">
+      <DependentUpon>frmAguarde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBancoCad.resx">
+      <DependentUpon>frmBancoCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBoleto.resx">
+      <DependentUpon>frmBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBoletoCad.resx">
+      <DependentUpon>frmBoletoCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCancelamento.resx">
+      <DependentUpon>frmCancelamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCartaCorrecao.resx">
+      <DependentUpon>frmCartaCorrecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEnviaEmail.resx">
+      <DependentUpon>frmEnviaEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmErro.resx">
+      <DependentUpon>frmErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInutilizar.resx">
+      <DependentUpon>frmInutilizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListaEmail.resx">
+      <DependentUpon>frmListaEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMsgErro.resx">
+      <DependentUpon>frmMsgErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNFeCad.resx">
+      <DependentUpon>frmNFeCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNFeProdutoCad.resx">
+      <DependentUpon>frmNFeProdutoCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmParams.resx">
+      <DependentUpon>frmParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcessa.resx">
+      <DependentUpon>frmProcessa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRecomendacoes.resx">
+      <DependentUpon>frmRecomendacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerBoleto.resx">
+      <DependentUpon>frmVerBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVisualizar.resx">
+      <DependentUpon>frmVisualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Boletos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Boletos.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\acserasarfbv2.crt" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Caixa_PJ.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Caixa_PJ_v1.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_CertiSign_Multipla_G3.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_CertiSign_Multipla_G5.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_CertiSign_Multipla_V3.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_FENACOM_RFB_G2.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Imprensa_Oficial_SP_RFB_G2.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_PRODEMGE.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_PRODEMGE2.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Raiz_v1.cer" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Raiz_v2.cer" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Raiz_v2.crt" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERASA_CertV1.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERASA_SRF.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERPRORFB.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERPRO_Final_v1.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERPRO_Final_v2.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_SERPRO_SRF_v1.p7b" />
+    <None Include="Library\NFe_Util\Cadeia Certificados WS\ICP-V2c.p7b" />
+    <None Include="Library\NFe_Util\Certificados\Associacao.pfx" />
+    <None Include="Library\NFe_Util\DPEC\consDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\DPEC\envDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\DPEC\leiauteDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\DPEC\retConsDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\DPEC\retDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\DPEC\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\NFe_Util_2G.tlb" />
+    <None Include="Library\NFe_Util\Schemas\cabecMsg_v1.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\cancNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consCad_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consReciNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consReciNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consStatServ_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consStatServ_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\consStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\envCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\envFiscoNfe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\envPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\procEventoNFe_v99.99.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\retEnvCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\retEnvFiscoNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\retPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\corindus-xsds_1.1\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\enviNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\enviNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\enviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\e110111_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\envEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\eventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\leiauteEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\procEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\retEnvEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Canc_PL_v1.01\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\CCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\e110110_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\envCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\leiauteCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\procCCeNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\retEnvCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_CCe_PL_v1.01\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\e110140_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\envEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\EPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\leiauteEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\leiauteEPEC_v1.00.xsd.bak" />
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\procEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\retEnvEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_EPEC_PL_v1.01\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\envEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\procEventoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\retEnvEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_Generico_PL_v1.01\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\confRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\e210200_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\e210210_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\e210220_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\e210240_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\envConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\leiauteConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\procConfRecebtoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\retEnvConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\Evento_ManifestaDest_PL_v1.01\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\inutNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\inutNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\inutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteCancNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsStatServ_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsStatServ_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsultaCadastro_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteInutNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteInutNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\leiauteNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\nfe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\nfe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\nfe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006u\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_006v\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008d\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008e\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008f\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008g\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h1\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h2\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008h\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_008i2_CFOP_EXTERNO\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\consReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\consSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\consStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\enviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\inutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\leiauteConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\leiauteConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\leiauteInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\leiauteNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\nfe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\procInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\procNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\retConsReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\retConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\retConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\retEnviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\retInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\tiposBasico_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\consReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\consSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\consStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\enviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\inutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\leiauteConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\leiauteConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\leiauteInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\leiauteNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\nfe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\procInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\procNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\retConsReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\retConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\retConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\retEnviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\retInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\tiposBasico_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_009_V4_1_40\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\distDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\resEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\resNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\retDistDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\tiposDistDFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_100\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\distDFeInt_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\resEvento_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\resNFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\retDistDFeInt_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\tiposDistDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\PL_NFeDistDFe_102\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procCancNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procInutNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procInutNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\procNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retCancNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsReciNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsReciNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsReciNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsSitNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsStatServ_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsStatServ_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retConsStatServ_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retEnviNFe_v1.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retEnviNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retEnviNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retInutNFe_v1.07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retInutNFe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\retInutNFe_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\tiposBasico_v1.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\tiposBasico_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\tiposBasico_v4.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Schemas\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\URL\ws.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\URL\ws2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\URL\ws3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\URL\ws4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\URL\wsSCAN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Library\NFe_Util\Utils\AC_Raiz_v5.cer" />
+    <None Include="Library\NFe_Util_2G.tlb" />
+    <None Include="NFeApp_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-New-File-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-media-playlist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-check-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign-LogOff-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torrent-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-Adobe-Dreamweaver-XML-01-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Document-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Delete-Database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-settings-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\Produto.html" />
+    <Content Include="Library\Boleto.Net.dll" />
+    <Content Include="Library\Boleto.Net.pdb" />
+    <Content Include="Library\Common.API.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Boleto.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Cripto.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Danfe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Deploy.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Document.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Email.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Infrastructure.Log.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Infrastructure.ORM.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.Nfe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.NoSql.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.NoSql.Repository.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Common.StorageBase.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\NFe_Util\Cadeia Certificados WS\Leiame.txt" />
+    <Content Include="Library\NFe_Util\Certificados\senhaCertificado.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\DPEC.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Lote-env-lot.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_assinada.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_falhaSchema.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135080021635213_v01.07-procInut.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135100021500481_v01.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135100021635181_v01.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135100021635455_v01.07-procCancNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135100025211945_v01.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\135100026182399_v01.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_S10_N000001_v110.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_S10_N000001_v110AM.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_S10_N000001_v110_assinada.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_s10_N000004_v110 - Cópia.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_s10_N000004_v110.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 %28NF-e%29\NFe_S10_N000005_v110.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635445_v02.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635450_v02.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635453_v02.00-procInutNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635460_v01.00-procNFe.XML" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635460_v02.00-procNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\135100021635462_v02.00-procCancNFe.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_ECF.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_refNF.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_S200_N000001_v200.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_S200_N000001_v200_Assinada.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_S200_N000006_v200.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_S200_N000006_v200_Assinada.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x %28NF-e 2G%29\NFe_S200_N000007_v200.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 %28NF-e%29\ModeloNF.TXT" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 %28NF-e%29\ModeloNFTXT.TXT" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 %28NF-e%29\ModeloNFTXT2.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10c.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10c2.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10d.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10e.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10f.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NF10g.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x %28NF-e 2G%29\NFeFCI.txt" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_resposta.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\procCancNFe_v107.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_resposta.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta104.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta106.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta223.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_resposta.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_resposta.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_cabec.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_pedido.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_resposta.xml" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_cabec.XML" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_pedido.XML" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_resposta.XML" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\procInutNFe_v107.XML" />
+    <Content Include="Library\NFe_Util\Exemplos de XML\XML_DPEC\DPEC.xml" />
+    <Content Include="Library\NFe_Util\NFe_Util_2G.dll" />
+    <Content Include="Library\NFe_Util\URL\ws.xml" />
+    <Content Include="Library\NFe_Util\URL\ws2.xml" />
+    <Content Include="Library\NFe_Util\URL\ws3.xml" />
+    <Content Include="Library\NFe_Util\URL\ws4.xml" />
+    <Content Include="Library\NFe_Util\URL\wsSCAN.xml" />
+    <Content Include="Library\NFe_Util\Utils\CertFlex.exe" />
+    <Content Include="Library\NFe_Util\Utils\leiame.txt" />
+    <Content Include="Library\NFe_Util\Utils\RegistryTypeLibraries.dll" />
+    <Content Include="Library\NFe_Util\Utils\TypeLibBrowser.exe" />
+    <Content Include="Library\NFe_Util_2G.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\Reports.dll" />
+    <Content Include="Library\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Screenshot_1.png" />
+    <Content Include="SumatraPDF.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\nfe-versao-4.png" />
+    <None Include="Resources\Search-2-icon.png" />
+    <None Include="Resources\Xml-tool-icon.png" />
+    <None Include="Resources\Files-Xml-icon.png" />
+    <None Include="Resources\Places-folder-downloads-icon.png" />
+    <None Include="Resources\Places-folder-downloads-icon %281%29.png" />
+    <None Include="Resources\Button-Refresh-icon.png" />
+    <None Include="Resources\Button-Refresh-icon %281%29.png" />
+    <None Include="Resources\trash-icon.png" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial110.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial110.dll" />
+    <None Include="Resources\ajax-loading-gif-3.gif" />
+    <None Include="Resources\ajax_loader.gif" />
+    <None Include="Resources\email-icon.png" />
+    <None Include="Resources\mail-01-icon.png" />
+    <None Include="Resources\document-add-icon.png" />
+    <None Include="Resources\Save-icon1.png" />
+    <None Include="Resources\table-edit-icon.png" />
+    <None Include="Resources\Actions-view-list-details-icon.png" />
+    <None Include="Resources\clip-icon.png" />
+    <None Include="Resources\document-arrow-up-icon.png" />
+    <None Include="Resources\document-delete-icon.png" />
+    <None Include="Resources\document-check-icon24.png" />
+    <None Include="Resources\print-icon.png" />
+    <None Include="Resources\fundo.JPG" />
+    <None Include="Resources\Save-icon %282%29.png" />
+    <None Include="Resources\Save-icon %281%29.png" />
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceModelEvents\ServiceModelEvents.csproj">
+      <Project>{a44e274b-46f7-4c4a-86c9-7806669e5d9d}</Project>
+      <Name>ServiceModelEvents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

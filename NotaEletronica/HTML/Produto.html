@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            font-family: Tahoma, Helvetica, sans-serif;
+            font-size: 14px;
+            padding: 10px;
+            color: #000000;
+            background-color: #d7effb;
+        }
+
+        #wrap {
+            margin: 1em auto;
+            text-align: left;
+            background-color: #FFFFFF;
+            min-width: 790px;
+            max-width: 1000px;
+        }
+
+        h3 {
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 3px 0px 3px 3px;
+            background: #BCD2EE;
+            color: #000000;
+            border-left: 5px solid #182939;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        #content table th {
+            background: #E8E8E8;
+            text-align: center;
+            font-weight: bold;
+            color: #182939;
+            border-top-color: #666666;
+        }
+
+        #content table {
+            display: table;
+            border-collapse: separate;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+
+            #content table td, #content table th {
+                padding: 4px 7px;
+                border: 1px solid #999999;
+                font-size: 14px;
+            }
+
+        td, th {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+
+            td[Attributes Style] {
+                text-align: -webkit-left;
+            }
+
+        user agent stylesheet td, th {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>Guia de Uso da NFe_Util 2Gv4.0.2a</h1>
+            <h2><a href="http://www.flexdocs.com.br"><img src="design/LogoFlexDocs.gif" alt="FlexDocs" title="Clique para retornar para a homepage"></a></h2>
+            <!-- <p class="generated">@ 26.11.2017</p> --->
+            <p class="location"><a href="index.html"><strong>Guia de Uso</strong></a> » <a href="gerarNFe.html">Gerar XML da NF-e <sup><font size="1" color="#FF0000"> [23-12-13]</font></sup></a> » <a href="gerarNFe.detalhe.html">Item da NF-e 3.10 <sup><font size="1" color="#FF0000"> [23-12-13]</font></sup></a> » <a href="gerarNFe.detalhe.pro.html">Dados do Produto</a> » <a href="gerarNFe.detalhe.pro.produto400.html">Detalhe Produtos/Serviços 4.00 <sup><font size="1" color="#FF0000"> [15-08-17]</font></sup></a></p>
+        </div>
+        <div id="content">
+             
+            <h3>Descrição:</h3>
+
+            <p>Funcionalidade para gerar o XML do grupo do detalhamento de produtos e Serviços da NF-e/NFC-e na versão 4.00 do leiaute da NF-e.</p>
+
+            <h3>Parâmetros:</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>nome</th>
+                        <th>tipo</th>
+                        <th>tam.</th>
+                        <th>obrig.</th>
+                        <th align="left">descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong><em>cProd</em></strong></td>
+                        <td>string</td>
+                        <td>1-60</td>
+                        <td>sim</td>
+                        <td align="left">informar o código do produto ou serviço. Preencher com CFOP, caso se trate de itens não relacionados com mercadorias/produtos e que o contribuinte não possua codificação própria. Formato ”CFOP9999”.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>cEAN</em></strong></td>
+                        <td>string</td>
+                        <td>0,8,12,13,14</td>
+                        <td>sim</td>
+                        <td align="left">informar o GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras. Preencher com o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 (antigos códigos EAN, UPC e DUN-14), não informar o conteúdo da TAG em caso de o produto não possuir este código.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>xProd</em></strong></td>
+                        <td>string</td>
+                        <td>1-120</td>
+                        <td>sim</td>
+                        <td align="left">informar a descrição do produto ou serviço.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>NCM</em></strong></td>
+                        <td>string</td>
+                        <td>2,8</td>
+                        <td>sim</td>
+                        <td align="left">informar o <a href="http://www.mdic.gov.br/sitio/interna/interna.php?area=5&amp;menu=1095#I">Código NCM</a> com 8 dígitos; informar a posição do capítulo do NCM (as duas primeiras posições do NCM) quando a operação não for de comércio exterior (importação/ exportação) ou o produto não seja tributado pelo IPI; se for serviços, informar 00.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>NVE_Opc</em></strong></td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>não</td>
+                        <td align="left">informar com a Codificação <a href=".\gerarNFe.detalhe.pro.NVE.html">NVE - Nomenclatura de Valor Aduaneiro e Estatística</a>, Codificação opcional que detalha alguns NCM <sup><font size="1" color="#FF0000"> [23-12-13]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>CEST_Opc</em></strong></td>
+                        <td>string</td>
+                        <td>7</td>
+                        <td>não</td>
+                        <td align="left">informar Código Especificador da Substituição Tributária - <a href="https://www.confaz.fazenda.gov.br/anexo-i.pdf">CEST</a>, que estabelece a sistemática de uniformização e identificação das mercadorias e bens passíveis de sujeição aos regimes de substituição tributária e de antecipação de recolhimento do ICMS.<br></td>
+                    </tr>
+                    <tr>
+                        <td><font color="#FF0000"><strong><em>indEscala_Opc</em></strong></font></td>
+                        <td>string</td>
+                        <td>1</td>
+                        <td>não</td>
+                        <td align="left">informar o Indicador de Escala Relevante.<br>Indicador de Produção em escala relevante, conforme Cláusula 23 do Convenio ICMS 52/2017:<br>S - Produzido em Escala Relevante;<br>N – Produzido em Escala NÃO Relevante.<br><strong><font color="#FF0000">(campo novo)</font></strong><sup><font size="1" color="#FF0000"> [15-08-17]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><font color="#FF0000"><strong><em>CNPJFab_Opc</em></strong></font></td>
+                        <td>string</td>
+                        <td>14</td>
+                        <td>não</td>
+                        <td align="left">informar o CNPJ do Fabricante da Mercadoria, obrigatório para produto em escala NÃO relevante.<strong><font color="#FF0000">(campo novo)</font></strong><sup><font size="1" color="#FF0000"> [15-08-17]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><font color="#FF0000"><strong><em>cBenef_Opc</em></strong></font></td>
+                        <td>string</td>
+                        <td>10</td>
+                        <td>não</td>
+                        <td align="left">informar o Código de Benefício Fiscal utilizado pela UF, aplicado ao item.<br>Obs.: Deve ser utilizado o mesmo código adotado na EFD e outras declarações, nas UF que o exigem.<strong><font color="#FF0000">(campo novo)</font></strong><sup><font size="1" color="#FF0000"> [15-08-17]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>EXTIPI</em></strong></td>
+                        <td>string</td>
+                        <td>2,3</td>
+                        <td>não</td>
+                        <td align="left">informar de acordo com o código EX da <a href="http://sijut.fazenda.gov.br/netahtml/sijut/SijutIntAsp/ATTIPI00.htm">TIPI</a> se houver para o NCM do produto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>CFOP</em></strong></td>
+                        <td>inteiro</td>
+                        <td>4</td>
+                        <td>sim</td>
+                        <td align="left">informar o CFOP - Código Fiscal de Operações e Prestações.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>uCOM</em></strong></td>
+                        <td>string</td>
+                        <td>1-6</td>
+                        <td>sim</td>
+                        <td align="left">informar a unidade de comercialização do produto (Ex. pc, und, dz, kg, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>qCOM</em></strong></td>
+                        <td>string</td>
+                        <td>15,4</td>
+                        <td>sim</td>
+                        <td align="left">informar a quantidade de comercialização do produto <strong><em>já formatado com ponto decimal</em></strong>.  A quantidade de casas decimais pode variar de 0 a 4.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vUnCOM</em></strong></td>
+                        <td>string</td>
+                        <td>21,10</td>
+                        <td>sim</td>
+                        <td align="left">Informar o valor unitário de comercialização do produto <strong><em>já formatado com ponto decimal</em></strong>, campo meramente informativo, o contribuinte pode utilizar a precisão desejada (0-10 decimais). Para efeitos de cálculo, o valor unitário será obtido pela divisão do valor do produto pela quantidade comercial.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vProd</em></strong></td>
+                        <td>duplo</td>
+                        <td>15,2</td>
+                        <td>sim</td>
+                        <td align="left">informar o valor total bruto do produto ou serviços.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>cEANTrib</em></strong></td>
+                        <td>string</td>
+                        <td>0,8,12,13,14</td>
+                        <td>sim</td>
+                        <td align="left">informar o GTIN (Global Trade Item Number) da unidade de tributação do produto, antigo código EAN ou código de barras. Preencher com o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 (antigos códigos EAN, UPC e DUN-14), não informar o conteúdo da TAG em caso de o produto não possuir este código.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>uTrib</em></strong></td>
+                        <td>string</td>
+                        <td>1-6</td>
+                        <td>sim</td>
+                        <td align="left">informar a unidade de tributação do produto (Ex. pc, und, dz, kg, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>qTrib</em></strong></td>
+                        <td>string</td>
+                        <td>15,4</td>
+                        <td>sim</td>
+                        <td align="left">informar a quantidade de tributação do produto <strong><em>já formatado com ponto decimal</em></strong>. A quantidade de casas decimais pode variar de 0 a 4.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vUnTrib</em></strong></td>
+                        <td>string</td>
+                        <td>21,10</td>
+                        <td>sim</td>
+                        <td align="left">Informar o valor unitário de tributação do produto <strong><em>já formatado com ponto decimal</em></strong>, campo meramente informativo, o contribuinte pode utilizar a precisão desejada (0-10 decimais). Para efeitos de cálculo, o valor unitário será obtido pela divisão do valor do produto pela quantidade tributável.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vFrete</em></strong></td>
+                        <td>duplo</td>
+                        <td>15,2</td>
+                        <td>não</td>
+                        <td align="left">informar o valor do Frete, o Frete deve ser rateado entre os itens de produto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vSeg</em></strong></td>
+                        <td>duplo</td>
+                        <td>15,2</td>
+                        <td>não</td>
+                        <td align="left">informar o valor do Seguro, o Seguro deve ser rateado entre os itens de produto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vDesc</em></strong></td>
+                        <td>duplo</td>
+                        <td>15,2</td>
+                        <td>não</td>
+                        <td align="left">informar o valor do desconto do item de produto ou serviço.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>vOutro</em></strong></td>
+                        <td>duplo</td>
+                        <td>15,2</td>
+                        <td>não</td>
+                        <td align="left">informar o valor de outras despesas acessórias do item de produto ou serviço.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>indTot</em></strong></td>
+                        <td>inteiro</td>
+                        <td>-</td>
+                        <td>sim</td>
+                        <td align="left">Este campo deverá ser preenchido com: 0 - o valor do item (vProd) não compõe o valor total da NF-e (vProd)  1 - o valor do item (vProd) compõe o valor total da NF-e.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>DI</em></strong></td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>não</td>
+                        <td align="left">informar o XML do grupo <a href="gerarNFe.detalhe.pro.DI.html"><strong><em>DI</em></strong></a> - dados da importação nas operações de importação.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>detExport_Opc</em></strong></td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>não</td>
+                        <td align="left">informar com as informações do <a href=".\gerarNFe.detalhe.pro.detExp.html">detalhamento da exportação</a> <sup><font size="1" color="#FF0000"> [23-12-13]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>DetEspecifico</em></strong></td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>não</td>
+                        <td align="left">informar o XML do grupo <a href="gerarNFe.detalhe.pro.det.veiculos.html"><strong><em>veicProd</em></strong></a> - detalhamento de específico de veículos novos ou com o XML do grupo <a href="gerarNFe.detalhe.pro.det.medic400.html"><strong><em>med</em></strong></a> - detalhamento de específico de medicamentos ou com o  XML do grupo <a href="gerarNFe.detalhe.pro.det.armamentos.html"><strong><em>arma</em></strong></a> - detalhamento de específico de armamentos ou com o XML do grupo <a href="gerarNFe.detalhe.pro.det.combustiveis400.html"><strong><em>comb</em></strong></a> - detalhamento de específico de combustíveis e lubrificantes ou com o XML do grupo <a href="gerarNFe.detalhe.pro.det.nRECOPI.html"><strong><em>RECOPI</em></strong></a> - informação do RECOPI</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>xPed</em></strong></td>
+                        <td>string</td>
+                        <td>1-15</td>
+                        <td>não</td>
+                        <td align="left">informar o número do pedido de compra, o campo é de livre uso do emissor.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>nItemPed</em></strong></td>
+                        <td>string</td>
+                        <td>1-6</td>
+                        <td>não</td>
+                        <td align="left">informar o número do item do pedido de compra, o campo é de livre uso do emissor.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><em>nFCI_Opc</em></strong></td>
+                        <td>string</td>
+                        <td>36</td>
+                        <td>não</td>
+                        <td align="left">informar o Número de controle da FCI - Ficha de Conteúdo de Importação com formatação, ex.: B01F70AF-10BF-4B1F-848C-65FF57F616FE <sup><font size="1" color="#FF0000"> [28-09-13]</font></sup></td>
+                    </tr>
+                    <tr>
+                        <td><font color="#FF0000"><strong><em>rastro_Opc</em></strong></font></td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>não</td>
+                        <td align="left">informar o grupo de <a href=".\gerarNFe.detalhe.pro.rastro.html">Detalhamento de produto sujeito a rastreabilidade</a>.<br><strong><font color="#FF0000">(campo novo)</font></strong><sup><font size="1" color="#FF0000"> [15-08-17]</font></sup></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <blockquote class="warning">
+                <p><strong>Importante</strong></p>
+
+                <p>
+                    Os tipos dos parâmetros: <strong><em>qCom</em></strong>, <strong><em>qTrib</em></strong>, <strong><em>vUnCom</em></strong> e <strong><em>vUnTrib</em></strong> foram alterados para <strong><em>string</em></strong>, pois a quantidade de casas decimais passou a ser variável.
+                    Para dar maior flexibilidade, o usuário já deve passar os valores com a quantidade de casas decimais que desejar para a DLL, vale observar que o ponto decimal deve ser o ponto decimal.
+                </p>
+            </blockquote>
+
+            <h3>Histórico de atualização:</h3>
+
+            <ul>
+                <li><strong>2017-08-15</strong> versão inicial.</li>
+            </ul>
+
+            <h3>Diagrama:</h3>
+
+            <p><img src="./media/prod400.png" alt="DiagramaProduto"></p>
+
+            <blockquote class="information">
+                <p><strong>Dica</strong></p>
+
+                <p>Os campos com contorno tracejado podem ser omitidos se a operação não exigir a informação.</p>
+
+                <p>
+                    Os grupos XML <a href="gerarNFe.detalhe.pro.det.veiculos.html"><strong><em>veicProd</em></strong></a> (detalhamento específico de veículos novos), <a href="gerarNFe.detalhe.pro.det.medic400.html"><strong><em>med</em></strong></a> (detalhamento específico de medicamentos e insumos), <a href="gerarNFe.detalhe.pro.det.armamentos.html"><strong><em>arma</em></strong></a> (detalhamento específico de armamentos), <a href="gerarNFe.detalhe.pro.det.combustiveis400.html"><strong><em>comb</em></strong></a> (detahamento específico de combustíveis e lubrificantes) e <a href="gerarNFe.detalhe.pro.det.RECOPI.html"><strong><em>RECOPI</em></strong></a> (informação do RECOPI)  são grupos XML que devem ser gerados em separado e são mutuamente exclusivos.
+                    Apenas um deles deve ser informado no parâmetro <strong><em>DetEspecifico</em></strong>.
+                </p>
+            </blockquote>
+
+            <h3>Retorno:</h3>
+
+            <p>Um string com o grupo XML do detalhe do Produto ou Serviço</p>
+
+            <h3>XML:</h3>
+
+            <p>Exemplo de XML do produto simples</p>
+
+<pre class="xml"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>00001<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEAN</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>Agua Mineral<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>25<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>5101<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>dz<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1000<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1000.00<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEANTrib</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>und<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>12000<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+
+            <p>Exemplo de XML do produto com detalhamento específico de medicamento</p>
+
+<pre class="xml">&nbsp;
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>402729<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEAN<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>7891058008628<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cEAN<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>DORFLEX 24X10 CP CH<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>30049012<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;genero<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>30<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/genero<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>5409<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>CX<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>2<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>25.4850<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>50.97<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEANTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>7891058008628<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cEANTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>CX<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>2<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>25.4850<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;med<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;nLote<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>602958<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/nLote<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dVal<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>2008-05-01<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dVal<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vPMC<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>80.73<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vPMC<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/med<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+
+            <p>Exemplo de XML do produto simples</p>
+
+<pre class="xml"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>00001<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEAN</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>Agua Mineral<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>25<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>5101<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>dz<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1000<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1000.00<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEANTrib</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>und<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>12000<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;nFCI<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>B01F70AF-10BF-4B1F-848C-65FF57F616FE<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/nFCI<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+
+            <p>Exemplo de XML do produto com NVE</p>
+
+<pre class="xml"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>00001<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/cProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEAN</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>Camisas de malha, de uso masculino<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/xProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>61051000<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NCM<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>AA0001<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>AB0002<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>AC0002<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/NVE<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>5101<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/CFOP<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>pc<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>100<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnCom<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1000.00<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vProd<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;cEANTrib</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>und<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/uTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>100<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/qTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/vUnTrib<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/intTot<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;nFCI<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>B01F70AF-10BF-4B1F-848C-65FF57F616FE<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/nFCI<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/prod<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+
+            <blockquote class="warning">
+                <p><strong>Importante</strong></p>
+
+                <p>O trecho do XML foi formatado para uma melhor visualização, a mensagem original não tem formatação.</p>
+
+                <p>Vale observar que a formatação pode corromper a assinatura digital, além de ocupar espaço e ser desnecessária, pois os browser exibem formatado.</p>
+            </blockquote>
+
+            <h3>Histórico de atualização:</h3>
+
+            <ul>
+                <li><strong>2015-11-08</strong> - versão inicial.</li>
+            </ul>
+
+            <h3>Exemplos de uso:</h3>
+
+            <p><strong>Visual Basic 6.0</strong></p>
+
+<pre class="vb"><span style="color: #008000;">' inicializar variáveis
+</span><span style="color: #008000;">'...............................................
+</span>
+<span style="color: #000080;">Dim</span> objNFeUtil <span style="color: #000080;">As</span> <span style="color: #000080;">Object</span>
+<span style="color: #008000;">'
+</span><span style="color: #000080;">Set</span> objNFeUtil = CreateObject(<span style="color: #800000;">"NFe_Util_2G.util"</span>)
+<span style="color: #008000;">'
+</span><span style="color: #008000;">'
+</span><span style="color: #008000;">'================grupo de detalhe do produto (grupo I01 do Manual de integração - páginas 95)=======================
+</span><span style="color: #008000;">'
+</span><span style="color: #008000;">'
+</span>prod_cProd = <span style="color: #800000;">"001152"</span>                       <span style="color: #008000;">'  código do produto
+</span>prod_cEAN = <span style="color: #800000;">"7897844200115"</span>                 <span style="color: #008000;">'  código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
+</span>prod_xProd = <span style="color: #800000;">"Cola Especial para EPS"</span>       <span style="color: #008000;">'  código do produto, espaços em branco consecutivos ou no início ou fim do campo podem
+</span>                                            <span style="color: #008000;">'  gerar erro de Schema XML, além de caracteres reservados do XML &lt;&gt;&amp;""
+</span>prod_NCM = <span style="color: #800000;">"35"</span>                             <span style="color: #008000;">'  código NCM, pode ser omitido se não sujeito ao IPI
+</span>prod_NVE = <span style="color: #800000;">""</span>                               <span style="color: #008000;">'  codificação NVE - Nomenclatura de Valor Aduaneiro e Estatística, "complemento" NCM
+</span>prod_CEST = <span style="color: #800000;">""</span>                              <span style="color: #008000;">'  codificação Código Especificador da Substituição Tributária - CEST
+</span>prod_indEscala = <span style="color: #800000;">""</span>                         <span style="color: #008000;">'  indicador de escala relevante
+</span>prod_CNPJFab = <span style="color: #800000;">""</span>                           <span style="color: #008000;">'  CNPJ do fabricante da mercadorias
+</span>prod_cBenef = <span style="color: #800000;">""</span>                            <span style="color: #008000;">'  código do benefício fiscal na UF aplicado ao item
+</span>prod_ExTIPI = <span style="color: #800000;">""</span>                            <span style="color: #008000;">'  ExTipi, especialização do código NCM, informar apenas se existir
+</span>prod_CFOP = <span style="color: #800000;">"5403"</span>                          <span style="color: #008000;">'  CFOP do operação, causa erro de XML se informado um código inexistente
+</span>prod_uCOM = <span style="color: #800000;">"UN"</span>                            <span style="color: #008000;">'  unidade de comercialização
+</span>prod_qCom = <span style="color: #800000;">"10"</span>                            <span style="color: #008000;">'  quantidade de comercialização
+</span>prod_vUnCom = <span style="color: #800000;">"1"</span>                           <span style="color: #008000;">'  valor IdeContigenciaário de comercialização, campo de mera demonstração deve ser o resultado da
+</span>                                            <span style="color: #008000;">'  da divisão do vProd / qCom
+</span>prod_vProd = 10                             <span style="color: #008000;">'  valor do total do item
+</span>prod_cEANTrib = <span style="color: #800000;">"7897844200115"</span>             <span style="color: #008000;">'  código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN,
+</span>                                            <span style="color: #008000;">'  em geral é o mesmo código do EAN de comercialização
+</span>prod_uTrib = <span style="color: #800000;">"UN"</span>                           <span style="color: #008000;">'  unidade de tributação, na maioria dos casos é idêntico  ao vUnCom, pode diferente nos
+</span>                                            <span style="color: #008000;">'  casos de produtos sujeitos a ST em que a unidade de pauta é diferente da unidade de
+</span>                                            <span style="color: #008000;">'  comercialização
+</span>                                            <span style="color: #008000;">'  Ex. unidade de comercialização = 1 pack de lata de cerveja =&gt; unidade de tributação =
+</span>                                            <span style="color: #008000;">'  1 lata (preço de pauta)
+</span>prod_qTrib = <span style="color: #800000;">"10"</span>                           <span style="color: #008000;">'  quantidade de comercialização
+</span>prod_vUnTrib = <span style="color: #800000;">"1"</span>                          <span style="color: #008000;">'  valor IdeContigenciaário de tributação, campo de mera demonstração deve ser o resultado da
+</span>                                            <span style="color: #008000;">'  divisão do vProd / qTrib
+</span>prod_vFrete = 0                             <span style="color: #008000;">'  valor do frete, se cobrado do cliente deve ser rateado entre os itens de produto
+</span>prod_vSeguro = 0                            <span style="color: #008000;">'  valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
+</span>prod_vDesc = 0                              <span style="color: #008000;">'  valor do desconto concedido
+</span>prod_vOutro = 0                             <span style="color: #008000;">'  valor de outras despesas
+</span>prod_indTot = 1                             <span style="color: #008000;">'  indicador se o valor do item será totalizado no valor total dos produtos
+</span>prod_DI = <span style="color: #800000;">""</span>                                <span style="color: #008000;">'  dados da importação, informar apenas no caso de NF de entrada (importação), para montar
+</span>                                            <span style="color: #008000;">'  o grupo utilize a funcionalidade DI
+</span>prod_DetExp = <span style="color: #800000;">""</span>                            <span style="color: #008000;">'  detalhamento das exportações
+</span>                                            <span style="color: #008000;">'  combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+</span>prod_xPed = <span style="color: #800000;">""</span>                              <span style="color: #008000;">'  número do pedido, uso exclusivo do usuário
+</span>prod_nItemPed = <span style="color: #800000;">"0"</span>                         <span style="color: #008000;">'  número do item do pedido, uso exclusivo do usuário
+</span>prod_nFCI = <span style="color: #800000;">""</span>                              <span style="color: #008000;">'  número da FCI
+</span>prod_DetEspec = <span style="color: #800000;">""</span>                          <span style="color: #008000;">'  dados específicos, informar para medicamento, veículos novos, armamentos e
+</span>                                            <span style="color: #008000;">'  combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+</span>prod_rastro = <span style="color: #800000;">""</span>                            <span style="color: #008000;">'  dados da rastreabilidade
+</span>
+&nbsp;
+det_Prod = objNFeUtil.produto400(prod_cProd, _
+                                    prod_cEAN, _
+                                    prod_xProd, _
+                                    prod_NCM, _
+                                    prod_NVE, _
+                                    prod_CEST, _
+                                    prod_indEscala, _
+                                    prod_CNPJFab, _
+                                    prod_cBenef, _
+                                    prod_ExTIPI, _
+                                    prod_CFOP, _
+                                    prod_uCOM, _
+                                    prod_qCom, _
+                                    prod_vUnCom, _
+                                    prod_vProd, _
+                                    prod_cEANTrib, _
+                                    prod_uTrib, _
+                                    prod_qTrib, _
+                                    prod_vUnTrib, _
+                                    prod_vFrete, _
+                                    prod_vSeguro, _
+                                    prod_vDesc, _
+                                    prod_vOutro, _
+                                    prod_indTot, _
+                                    prod_DI, _
+                                    prod_DetExp, _
+                                    prod_DetEspec, _
+                                    prod_xPed, _
+                                    prod_nItemPed, _
+                                    prod_nFCI, _
+                                    prod_rastro)
+&nbsp;
+MsgBox det_Prod, vbInformation, <span style="color: #800000;">"Informação"</span></pre>
+
+            <blockquote class="warning">
+                <p><strong>Importante</strong></p>
+
+                <p>Se houver mais de um item de detalhe, o usuário deve concatenar os detalhes.</p>
+            </blockquote>
+            <dl class="location location-bottom"><dt>16.8.1.3. Detalhe Produtos/Serviços 4.00 <sup><font size="1" color="#FF0000"> [15-08-17]</font></sup><br><a href="gerarNFe.detalhe.pro.html">16.8.1. Dados do Produto</a></dt><dd class="prev"><a href="gerarNFe.detalhe.pro.produtoNT2015003.html">« Anterior</a><br>16.8.1.2. Detalhe Produtos/Serviços NT2015/003 <sup><font size="1" color="#FF0000"> [08-11-15]</font></sup></dd><dd class="next"><a href="gerarNFe.detalhe.pro.DI.html">Próximo »</a><br>16.8.1.4. Informações da DI 3.10 <sup><font size="1" color="#FF0000"> [23-12-13]</font></sup></dd></dl>
+        </div>
+
+        <div id="footer">
+            <p>Copyright © <a href="http://www.flexdocs.com.br">FlexDocs Documentos Eletrônicos</a> - 2008-2017 - Todos os direitos reservados</p>
+            <p>Generated by <strong>TypeFriendly 0.1.3</strong> by <a href="http://www.invenzzia.org/">Invenzzia</a></p>
+        </div>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-3597552-4");
+                pageTracker._trackPageview();
+            } catch (err) { }</script>
+
+    </div>
+</body>
+</html>
