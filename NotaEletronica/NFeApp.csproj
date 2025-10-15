@@ -90,9 +90,9 @@
       <HintPath>..\..\..\boletonet-master\src\packages\Microsoft.SqlServer.Types.11.0.0\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NFe_Util_2G, Version=4.0.17.2, Culture=neutral, PublicKeyToken=6369240506ce0263, processorArchitecture=MSIL">
+    <Reference Include="NFe_Util_2G, Version=4.0.21.2, Culture=neutral, PublicKeyToken=6369240506ce0263, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Library\NFe_Util_2G.dll</HintPath>
+      <HintPath>D:\Sorceus\NBF.NFe\NotaEletronica\Library\NFe_Util\NFe_Util_2G.dll</HintPath>
     </Reference>
     <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -300,6 +300,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Boletos.rpt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Util\Combos.cs" />
     <Compile Include="Util\Util.cs" />

@@ -356,12 +356,13 @@ namespace NotaEletronica.BLL
                 string msgRetWS = "";
                 int cStat = 0;
                 string msgResultado = "";
-                string nroRecibo = "";
-                string dhRecbto = "";
+                string nroProtocolo = "";
+                string dhProtocolo = "";
                 string tMed = "";
                 string proxy = "";
                 string usuario = "";
                 string senha = "";
+                string NFAssinada = "";
                 string licenca = ssv.getTokenSecurity(emi.emi_CNPJ);
 
                 if (!string.IsNullOrEmpty(n.Recibo))
@@ -371,17 +372,12 @@ namespace NotaEletronica.BLL
                         return consultaRetorno;
                 }
 
-                //if (!_dll.VerifyWSState(siglaWS, siglaWS, (int)p.Ambiente, NomeCertificado, "4.00", "", "getService", "", licenca, out msgDados))
-                //{
-                //    return msgDados;
-                //}
 
                 //Envia a Nota Fiscal para a SEFAZ
-                string NFeAssinada = dll.EnviaNFe2G(siglaWS, ref NFe, NomeCertificado, "4.00", out msgDados, out msgRetWS, out cStat, out msgResultado, out nroRecibo, out dhRecbto, out tMed, proxy, usuario, senha, licenca);
-                n.MsgRetorno = msgResultado;
-
+                string XMLNFeProc = dll.EnviaNFSincrono(siglaWS, NFe, NomeCertificado, "4.00", out msgDados, out msgRetWS, out cStat, out msgResultado, out nroProtocolo, out dhProtocolo, out NFAssinada, proxy, usuario, senha, licenca);
+                     
                 //Salva o XML para usar depois
-                x.NFe_XML = NFeAssinada;
+                x.NFe_XML = XMLNFeProc;
                 if (x.IdNFeXML == 0)
                 {
                     xdal.Insert(x);
@@ -392,17 +388,29 @@ namespace NotaEletronica.BLL
                 }
                 xdal.Save();
                 System.Threading.Thread.Sleep(1000);
-                //caso recebeu corretamente
-                if (cStat == 103)
+                
+
+                if (cStat == 100) //nota autorizada
                 {
-                    n.Recibo = nroRecibo;
-                    n.NFeStatus = "NF-e Transmitida";
+                    //atualiza o xml da nota
+                    x.NFe_XML = XMLNFeProc;
+                    xdal.Update(x);
+                    xdal.Save();
+                    n.Protocolo = nroProtocolo;
+                    n.DtAutorizacao = DataAutorizacao(XMLNFeProc);
+                    n.MsgRetorno = msgResultado;
+                    n.NFeStatus = "NF-e Autorizada";
                     dal.Update(n);
                     dal.Save();
-                    msgResultado = ConsultarProcessamento();
                 }
-
+                else
+                {
+                    n.MsgRetorno = msgResultado;
+                    dal.Update(n);
+                    dal.Save();
+                }
                 return msgResultado;
+                 
             }
             catch (Exception ex)
             {
@@ -436,6 +444,7 @@ namespace NotaEletronica.BLL
 
         public string ConsultarProcessamento()
         {
+            return "";
             try
             {
                 int CodReturn = 0;
