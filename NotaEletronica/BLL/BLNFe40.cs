@@ -358,7 +358,6 @@ namespace NotaEletronica.BLL
                 string msgResultado = "";
                 string nroProtocolo = "";
                 string dhProtocolo = "";
-                string tMed = "";
                 string proxy = "";
                 string usuario = "";
                 string senha = "";
@@ -1318,11 +1317,8 @@ namespace NotaEletronica.BLL
 
         private string pag()
         {
-            string detPag = dll.detPag("", string.IsNullOrEmpty(n.pag_tPag) ? "99" : n.pag_tPag, Convert.ToDouble(n.pag_vPag == null ? 0 : n.pag_vPag), "", "", "", "");
-            //
-
-
-            //ll.detPag(string.IsNullOrEmpty(n.pag_tPag) ? "99" : n.pag_tPag, Convert.ToDouble(n.pag_vPag == null ? 0 : n.pag_vPag), "", "", "", "");
+            //string detPag = dll.detPag("", string.IsNullOrEmpty(n.pag_tPag) ? "99" : n.pag_tPag, Convert.ToDouble(n.pag_vPag == null ? 0 : n.pag_vPag), "", "", "", "");
+            string detPag = dll.detPag("", string.IsNullOrEmpty(n.pag_tPag) ? "99" : n.pag_tPag, 0, "", "", "", "");
 
             return dll.pagamento400(detPag, 0);
         }

@@ -58,26 +58,7 @@ namespace NotaEletronica.Forms
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            DateTime de = Convert.ToDateTime(txtDe.Text + " 00:00");
-            DateTime ate = Convert.ToDateTime(txtAte.Text + " 23:59");
-
-            if (checkBox2.Checked)
-            {
-                de = Convert.ToDateTime("01/01/2000 00:00");
-                ate = Convert.ToDateTime("01/01/2050 23:59");
-            }
-
-            string Situacao = cboSituacao.Text;
-            List<FiltroRelatorio> ff = new List<FiltroRelatorio>();
-            ff.Add(new FiltroRelatorio() { Nome = "de", Valor = de.ToString("yyyyMMdd") });
-            ff.Add(new FiltroRelatorio() { Nome = "ate", Valor = ate.ToString("yyyyMMdd") });
-            ff.Add(new FiltroRelatorio() { Nome = "situacao", Valor = cboSituacao.Text });
-            ff.Add(new FiltroRelatorio() { Nome = "nota", Valor = txtNota.Text });
-            ff.Add(new FiltroRelatorio() { Nome = "nome", Valor = txtNome.Text });
-
-            frmVisualizar frmv = new frmVisualizar("BoletosLista");
-            frmv.FiltrosRelatorio = ff;
-            frmv.ShowDialog();
+           
         }
 
         private void btnEmail_Click(object sender, EventArgs e)

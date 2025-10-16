@@ -32,7 +32,7 @@ namespace NotaEletronica
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 
-            DateTime dt = new DateTime(2025, 6, 15);
+            DateTime dt = new DateTime(2026, 6, 15);
 
             if (DateTime.Now > dt)
             {

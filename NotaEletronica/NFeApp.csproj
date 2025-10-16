@@ -252,18 +252,6 @@
     <Compile Include="Forms\frmRecomendacoes.Designer.cs">
       <DependentUpon>frmRecomendacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmVerBoleto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmVerBoleto.Designer.cs">
-      <DependentUpon>frmVerBoleto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmVisualizar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmVisualizar.Designer.cs">
-      <DependentUpon>frmVisualizar.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,13 +283,6 @@
     <Compile Include="Models\PesquisaGrid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\Boletos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Boletos.rpt</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Util\Combos.cs" />
     <Compile Include="Util\Util.cs" />
     <Compile Include="Util\UtilBradescoCobranca400.cs" />
@@ -355,12 +336,6 @@
     <EmbeddedResource Include="Forms\frmRecomendacoes.resx">
       <DependentUpon>frmRecomendacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmVerBoleto.resx">
-      <DependentUpon>frmVerBoleto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmVisualizar.resx">
-      <DependentUpon>frmVisualizar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,11 +349,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\Boletos.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Boletos.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="Library\NFe_Util\Cadeia Certificados WS\acserasarfbv2.crt" />
     <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Caixa_PJ.p7b" />
     <None Include="Library\NFe_Util\Cadeia Certificados WS\AC_Caixa_PJ_v1.p7b" />
@@ -1944,6 +1914,9 @@
       <Project>{a44e274b-46f7-4c4a-86c9-7806669e5d9d}</Project>
       <Name>ServiceModelEvents</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

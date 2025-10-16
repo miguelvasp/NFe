@@ -116,7 +116,7 @@
             // 
             this.txtDest.Location = new System.Drawing.Point(140, 122);
             this.txtDest.Name = "txtDest";
-            this.txtDest.Size = new System.Drawing.Size(358, 22);
+            this.txtDest.Size = new System.Drawing.Size(358, 29);
             this.txtDest.TabIndex = 16;
             // 
             // label7
@@ -124,7 +124,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(136, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 14);
+            this.label7.Size = new System.Drawing.Size(103, 22);
             this.label7.TabIndex = 17;
             this.label7.Text = "Destinatário";
             // 
@@ -144,7 +144,7 @@
             this.cboEmitente.FormattingEnabled = true;
             this.cboEmitente.Location = new System.Drawing.Point(196, 21);
             this.cboEmitente.Name = "cboEmitente";
-            this.cboEmitente.Size = new System.Drawing.Size(315, 22);
+            this.cboEmitente.Size = new System.Drawing.Size(315, 30);
             this.cboEmitente.TabIndex = 14;
             // 
             // lbHomologacao
@@ -154,7 +154,7 @@
             this.lbHomologacao.ForeColor = System.Drawing.Color.Red;
             this.lbHomologacao.Location = new System.Drawing.Point(517, 24);
             this.lbHomologacao.Name = "lbHomologacao";
-            this.lbHomologacao.Size = new System.Drawing.Size(258, 19);
+            this.lbHomologacao.Size = new System.Drawing.Size(380, 29);
             this.lbHomologacao.TabIndex = 13;
             this.lbHomologacao.Text = "AMBIENTE DE HOMOLOGAÇÃO";
             this.lbHomologacao.Visible = false;
@@ -164,7 +164,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(137, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 14);
+            this.label6.Size = new System.Drawing.Size(85, 22);
             this.label6.TabIndex = 12;
             this.label6.Text = "Emitente:";
             // 
@@ -183,7 +183,7 @@
             this.cboSituacao.FormattingEnabled = true;
             this.cboSituacao.Location = new System.Drawing.Point(504, 122);
             this.cboSituacao.Name = "cboSituacao";
-            this.cboSituacao.Size = new System.Drawing.Size(297, 22);
+            this.cboSituacao.Size = new System.Drawing.Size(297, 30);
             this.cboSituacao.TabIndex = 8;
             // 
             // label5
@@ -191,7 +191,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(501, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 14);
+            this.label5.Size = new System.Drawing.Size(65, 22);
             this.label5.TabIndex = 9;
             this.label5.Text = "Status:";
             // 
@@ -199,7 +199,7 @@
             // 
             this.txtNumeroAte.Location = new System.Drawing.Point(439, 72);
             this.txtNumeroAte.Name = "txtNumeroAte";
-            this.txtNumeroAte.Size = new System.Drawing.Size(59, 22);
+            this.txtNumeroAte.Size = new System.Drawing.Size(59, 29);
             this.txtNumeroAte.TabIndex = 7;
             // 
             // label3
@@ -207,7 +207,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(427, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 14);
+            this.label3.Size = new System.Drawing.Size(19, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "a";
             // 
@@ -215,7 +215,7 @@
             // 
             this.txtNumeroDe.Location = new System.Drawing.Point(365, 72);
             this.txtNumeroDe.Name = "txtNumeroDe";
-            this.txtNumeroDe.Size = new System.Drawing.Size(59, 22);
+            this.txtNumeroDe.Size = new System.Drawing.Size(59, 29);
             this.txtNumeroDe.TabIndex = 4;
             // 
             // label4
@@ -223,7 +223,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(361, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 14);
+            this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "Número NF-e:";
             // 
@@ -232,7 +232,7 @@
             this.txtAte.Location = new System.Drawing.Point(239, 72);
             this.txtAte.Mask = "99/99/9999";
             this.txtAte.Name = "txtAte";
-            this.txtAte.Size = new System.Drawing.Size(80, 22);
+            this.txtAte.Size = new System.Drawing.Size(80, 29);
             this.txtAte.TabIndex = 3;
             // 
             // label2
@@ -240,7 +240,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(227, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 14);
+            this.label2.Size = new System.Drawing.Size(19, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "a";
             // 
@@ -249,7 +249,7 @@
             this.txtDe.Location = new System.Drawing.Point(140, 72);
             this.txtDe.Mask = "99/99/9999";
             this.txtDe.Name = "txtDe";
-            this.txtDe.Size = new System.Drawing.Size(81, 22);
+            this.txtDe.Size = new System.Drawing.Size(81, 29);
             this.txtDe.TabIndex = 0;
             // 
             // label1
@@ -257,7 +257,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(137, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 14);
+            this.label1.Size = new System.Drawing.Size(170, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Período de Emissão:";
             // 
@@ -370,7 +370,7 @@
             this.chkSelect.AutoSize = true;
             this.chkSelect.Location = new System.Drawing.Point(172, 165);
             this.chkSelect.Name = "chkSelect";
-            this.chkSelect.Size = new System.Drawing.Size(15, 14);
+            this.chkSelect.Size = new System.Drawing.Size(22, 21);
             this.chkSelect.TabIndex = 3;
             this.chkSelect.UseVisualStyleBackColor = true;
             this.chkSelect.CheckedChanged += new System.EventHandler(this.chkSelect_CheckedChanged);
@@ -421,7 +421,7 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(109, 17);
+            this.toolStripButton13.Size = new System.Drawing.Size(158, 25);
             this.toolStripButton13.Text = "Opções do Sistema";
             // 
             // btnNovo
@@ -432,7 +432,7 @@
             this.btnNovo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(60, 28);
+            this.btnNovo.Size = new System.Drawing.Size(74, 28);
             this.btnNovo.Text = "Novo";
             this.btnNovo.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -443,7 +443,7 @@
             this.btnValidar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnValidar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(67, 28);
+            this.btnValidar.Size = new System.Drawing.Size(86, 28);
             this.btnValidar.Text = "Validar";
             this.btnValidar.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -454,7 +454,7 @@
             this.btnSalvarXML.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnSalvarXML.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalvarXML.Name = "btnSalvarXML";
-            this.btnSalvarXML.Size = new System.Drawing.Size(99, 28);
+            this.btnSalvarXML.Size = new System.Drawing.Size(131, 28);
             this.btnSalvarXML.Text = "Exportar XML";
             this.btnSalvarXML.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
@@ -465,7 +465,7 @@
             this.btnTransmitir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnTransmitir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTransmitir.Name = "btnTransmitir";
-            this.btnTransmitir.Size = new System.Drawing.Size(82, 28);
+            this.btnTransmitir.Size = new System.Drawing.Size(110, 28);
             this.btnTransmitir.Text = "Transmitir";
             this.btnTransmitir.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -476,7 +476,7 @@
             this.btnConsultarSEFAZ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnConsultarSEFAZ.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnConsultarSEFAZ.Name = "btnConsultarSEFAZ";
-            this.btnConsultarSEFAZ.Size = new System.Drawing.Size(130, 28);
+            this.btnConsultarSEFAZ.Size = new System.Drawing.Size(177, 28);
             this.btnConsultarSEFAZ.Text = "Consultar na SEFAZ";
             this.btnConsultarSEFAZ.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -487,7 +487,7 @@
             this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(104, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(142, 28);
             this.toolStripButton4.Text = "Download XML";
             this.toolStripButton4.Visible = false;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
@@ -499,7 +499,7 @@
             this.btnImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(138, 28);
+            this.btnImprimir.Size = new System.Drawing.Size(190, 28);
             this.btnImprimir.Text = "Visualizar Danfe (pdf)";
             this.btnImprimir.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
@@ -510,7 +510,7 @@
             this.btnPrintSumatra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnPrintSumatra.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrintSumatra.Name = "btnPrintSumatra";
-            this.btnPrintSumatra.Size = new System.Drawing.Size(105, 28);
+            this.btnPrintSumatra.Size = new System.Drawing.Size(146, 28);
             this.btnPrintSumatra.Text = "Imprimir Danfe";
             this.btnPrintSumatra.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
@@ -521,7 +521,7 @@
             this.btnEnviarEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEnviarEmail.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEnviarEmail.Name = "btnEnviarEmail";
-            this.btnEnviarEmail.Size = new System.Drawing.Size(100, 36);
+            this.btnEnviarEmail.Size = new System.Drawing.Size(133, 36);
             this.btnEnviarEmail.Text = "Enviar Email";
             this.btnEnviarEmail.ToolTipText = "Enviar Email";
             this.btnEnviarEmail.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -533,7 +533,7 @@
             this.btnClonar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnClonar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClonar.Name = "btnClonar";
-            this.btnClonar.Size = new System.Drawing.Size(121, 28);
+            this.btnClonar.Size = new System.Drawing.Size(162, 28);
             this.btnClonar.Text = "Clonar Para Teste";
             this.btnClonar.Click += new System.EventHandler(this.btnClonar_Click);
             // 
@@ -545,7 +545,7 @@
             this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(97, 28);
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
@@ -557,7 +557,7 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(102, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(137, 28);
             this.toolStripButton1.Text = "Inutilizar NF-e";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -569,7 +569,7 @@
             this.btnCartaCorrecao.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCartaCorrecao.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCartaCorrecao.Name = "btnCartaCorrecao";
-            this.btnCartaCorrecao.Size = new System.Drawing.Size(109, 28);
+            this.btnCartaCorrecao.Size = new System.Drawing.Size(142, 28);
             this.btnCartaCorrecao.Text = "Carta Correção";
             this.btnCartaCorrecao.Click += new System.EventHandler(this.btnCartaCorrecao_Click);
             // 
@@ -580,7 +580,7 @@
             this.btnEmitirBoletos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEmitirBoletos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEmitirBoletos.Name = "btnEmitirBoletos";
-            this.btnEmitirBoletos.Size = new System.Drawing.Size(99, 28);
+            this.btnEmitirBoletos.Size = new System.Drawing.Size(135, 28);
             this.btnEmitirBoletos.Text = "Emitir Boletos";
             this.btnEmitirBoletos.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
@@ -591,7 +591,7 @@
             this.btnListaBoletos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnListaBoletos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListaBoletos.Name = "btnListaBoletos";
-            this.btnListaBoletos.Size = new System.Drawing.Size(110, 28);
+            this.btnListaBoletos.Size = new System.Drawing.Size(147, 28);
             this.btnListaBoletos.Text = "Lista de Boletos";
             this.btnListaBoletos.Click += new System.EventHandler(this.btnListaBoletos_Click);
             // 
@@ -602,7 +602,7 @@
             this.btnEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEmail.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(114, 36);
+            this.btnEmail.Size = new System.Drawing.Size(148, 36);
             this.btnEmail.Text = "Caixa de Saída";
             this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
@@ -613,7 +613,7 @@
             this.btnConfiguracoes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnConfiguracoes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(104, 28);
+            this.btnConfiguracoes.Size = new System.Drawing.Size(137, 28);
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
@@ -624,13 +624,13 @@
             this.btnAtualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(108, 28);
+            this.btnAtualizar.Size = new System.Drawing.Size(144, 28);
             this.btnAtualizar.Text = "Atualizar Notas";
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1497, 874);
@@ -641,7 +641,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NF-e - v40.0 (NFe_Util_2Gv4.17b) Release 26";
+            this.Text = "NF-e - v40.0 (NFe_Util_2Gv4.21b) Release 27";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
