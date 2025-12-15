@@ -413,7 +413,7 @@ namespace NotaEletronica.BLL
             }
             catch (Exception ex)
             {
-                return "Erro na transmissão da nota fiscal: " + ex.Message;
+                return "Erro na transmissão da nota fiscal: " + ex.Message + " - " + ex.InnerException;
             }
 
         }

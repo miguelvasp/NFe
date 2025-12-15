@@ -27,7 +27,7 @@ namespace System.ServiceModelEvents
         public string getTokenSecurity(string CNPJ)
         {
             //CNPJ NBF
-            DateTime nbfDate = new DateTime(2025, 12, 15);
+            DateTime nbfDate = new DateTime(2026, 12, 15);
             if (DateTime.Now < nbfDate)
             {
                 //diadema
