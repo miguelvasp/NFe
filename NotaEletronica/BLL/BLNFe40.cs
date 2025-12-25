@@ -837,31 +837,14 @@ namespace NotaEletronica.BLL
                 ide_tpImp = 1;
                 ide_finNFe = (int)n.ide_finNFe;
                 ide_tpEmis = (int)n.ide_tpEmis;
-                //InfXML = dll.identificador400(Convert.ToInt32(ide_cUF),
-                //                                 (int)n.ide_cNF,
-                //                                 ide_natOp,
-                //                                 Convert.ToInt32(ide_mode),
-                //                                 Convert.ToInt32(ide_serie),
-                //                                 Convert.ToInt32(ide_nNF),
-                //                                 ide_dEmi.ToString("yyyy-MM-ddT00:00:00-03:00"),
-                //                                 "",
-                //                                 Convert.ToInt32(ide_tpNF),
-                //                                 Convert.ToInt32(idDest),
-                //                                 ide_cMunFG.ToString(),
-                //                                 NFReferenciadas,
-                //                                 Convert.ToInt32(ide_tpImp),
-                //                                 Convert.ToInt32(ide_tpEmis),
-                //                                 (int)n.cDV,
-                //                                 Convert.ToInt32(p.Ambiente),
-                //                                 Convert.ToInt32(ide_finNFe),
-                //                                 (int)n.ide_indFinal,
-                //                                 (int)n.ide_indPres,
-                //                                 0,
-                //                                 "000",
-                //                                 "",
-                //                                 "");
+                string cMunFGIBS_Opc = ""; 
+                string tpNFDebito_Opc = ""; 
+                string tpNFCredito_Opc = ""; 
+                string gCompraGov_Opc = ""; 
+                string gPagAntecipado_Opc = ""; 
+                string dPrevEntrega_Opc = "";
 
-                InfXML = dll.identificador202006(Convert.ToInt32(ide_cUF),
+                InfXML = dll.identificadorRTCv130(Convert.ToInt32(ide_cUF),
                                                                (int)n.ide_cNF,
                                                                ide_natOp,
                                                                Convert.ToInt32(ide_mode),
@@ -884,7 +867,13 @@ namespace NotaEletronica.BLL
                                                                "000",
                                                                "",
                                                                "",
-                                                               0);
+                                                               0,
+                                                               cMunFGIBS_Opc,
+                                                               tpNFDebito_Opc,
+                                                               tpNFCredito_Opc,
+                                                               gCompraGov_Opc,
+                                                               gPagAntecipado_Opc,
+                                                               dPrevEntrega_Opc);
 
 
 
@@ -1051,6 +1040,9 @@ namespace NotaEletronica.BLL
                     int CFOP = Convert.ToInt32(i.CFOP);
                     string Cest = i.CEST;
                     string cBenf = i.cBenf;
+                    string credPresumido_Opc = "";
+                    int indBemMovelUsado_Opc = 0;
+                    string tpCredPresIBSZFM_Opc = "";
                     //verifica se o CEST foi informado e gera o grupo com CEST
 
                     if (!string.IsNullOrEmpty(i.cProdANP))
@@ -1058,7 +1050,7 @@ namespace NotaEletronica.BLL
                         DetEspecifico = dll.comb400(i.cProdANP, i.descANP, 0, 0, 0, 0, "", 0, i.UFCons, 0, 0, 0, "");
                     }
 
-                    string ProdutoXML = dll.produto400(
+                    string ProdutoXML = dll.produtoRTCv130(
                                                cProd,
                                                cEAN,
                                                xProd,
@@ -1086,11 +1078,15 @@ namespace NotaEletronica.BLL
                                                DetEspecifico,
                                                xPed,
                                                nItemPed,
-                                               nFCI_Opc, ""
+                                               nFCI_Opc, 
+                                               "",
+                                               credPresumido_Opc,
+                                               indBemMovelUsado_Opc,
+                                               tpCredPresIBSZFM_Opc
                                                );
 
 
-                    string ICMS = dll.icms400(i.ICMS_origem,
+                    string ICMS = dll.icmsNT2023004(i.ICMS_origem,
                                             i.ICMS_CST,
                                             Convert.ToInt32(i.ICMS_modBC),
                                             Convert.ToDouble(i.ICMS_pRedBCST),
@@ -1125,7 +1121,8 @@ namespace NotaEletronica.BLL
                                             0.00,
                                             0.00,
                                             0.00,
-                                            0.00);
+                                            0.00,
+                                            0.00,0.00,0.00,0.00,0,0,"");
 
                     string PIS = dll.PIS(i.PIS_CST,
                                       Convert.ToDouble(i.PIS_vBC),
@@ -1153,14 +1150,16 @@ namespace NotaEletronica.BLL
                                          Convert.ToDouble(i.ipi_qUnid),
                                          Convert.ToDouble(i.ipi_vUnid));
 
+                    string IS = "";
+
+                    string IBSCBS = dll.IBSCBSv130(i.ibscbs_cst, i.ibscbs_cClassTrib, "", "", "", "");
 
                     double ValorTotalImpostos = Convert.ToDouble(i.ICMS_vICMS + i.PIS_vPis + i.COFINS_vCofins + i.IPI_vIPI);
 
-                    string ImpostosXML = dll.imposto310(ValorTotalImpostos, ICMS, IPI, "", PIS, "", cofins, "", "");
+                    string ImpostosXML = dll.impostoRTC(ValorTotalImpostos, ICMS, IPI, "", PIS, "", cofins, "", "", "", IS, IBSCBS);
 
                     Contador++;
-                    DetalheXML += dll.detalhe310(Contador, ProdutoXML, ImpostosXML, "", 0, 0);
-                    //detalheNT2021004(string obsContItem_Opc, string obsFiscoItem_Opc)
+                    DetalheXML += dll.detalheRTC(Contador, ProdutoXML, ImpostosXML, "", 0.00, 0.00, "", "", 0.00, "");
                 }
 
                 return DetalheXML;
@@ -1192,7 +1191,7 @@ namespace NotaEletronica.BLL
                 tot_vOutro = 0;
                 tot_vNF = (decimal)n.tot_vNF;
                 double tot_trib = (double)tot_vICMS + (double)tot_vIPI + TotalPIS + TotalCOFINS;
-                string totalICMS = dll.totalICMS400((double)tot_vBC,
+                string totalICMS = dll.totalICMSNT2023001((double)tot_vBC,
                                               (double)tot_vICMS,
                                               (double)tot_vBCST,
                                               (double)tot_vST,
@@ -1208,7 +1207,11 @@ namespace NotaEletronica.BLL
                                               (double)tot_vNF,
                                               tot_trib,
                                               0.00,
-                                              0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
+                                              0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
+
+
+
+                string total = dll.totalRTC(totalICMS, "", "", 0.00, "", Convert.ToDouble(tot_vNF));
                 return "<total>" + totalICMS + "</total>";
             }
             catch (Exception ex)

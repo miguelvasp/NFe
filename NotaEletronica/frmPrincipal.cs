@@ -14,6 +14,7 @@ using System.IO;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Net;
+using NFe_Util_2G;
 
 namespace NotaEletronica
 {
@@ -21,7 +22,7 @@ namespace NotaEletronica
     {
         string XNomeCertificado = "";
         int AmbienteSelecionado = 0;
-
+        NFe_Util_2G.Util dll = new NFe_Util_2G.Util();
 
 
         public frmPrincipal()
@@ -31,6 +32,8 @@ namespace NotaEletronica
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+
+            var versaoDll = dll.Versao();
 
             DateTime dt = new DateTime(2026, 6, 15);
 
@@ -72,6 +75,9 @@ namespace NotaEletronica
                 par.Update(pl);
                 par.Save();
             }
+
+            var label = $"NF-e - v40.0 (NFe_Util {versaoDll}) Release 27";
+            this.Text = label;
 
         }
 

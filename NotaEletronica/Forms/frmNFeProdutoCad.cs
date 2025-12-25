@@ -22,7 +22,7 @@ namespace NotaEletronica.Forms
             p = n;
             IdNFe = pIdNFe;
             InitializeComponent();
-            if(Bloqueada)
+            if (Bloqueada)
             {
                 toolStripButton1.Enabled = false;
                 toolStripButton2.Enabled = false;
@@ -36,6 +36,15 @@ namespace NotaEletronica.Forms
             //NCM.DisplayMember = "Text";
             //NCM.ValueMember = "Value";
             //NCM.SelectedIndex = -1;
+            CboCodigoSituacaoTributaria.DataSource = c.getCodigoSituacaoTributaria();
+            CboCodigoSituacaoTributaria.DisplayMember = "Text";
+            CboCodigoSituacaoTributaria.ValueMember = "Value";
+            CboCodigoSituacaoTributaria.SelectedIndex = -1;
+
+            CboCodigoClassificacaoTributaria.DataSource = c.getCodigoClassificacaoTributaria();
+            CboCodigoClassificacaoTributaria.DisplayMember = "Text";
+            CboCodigoClassificacaoTributaria.ValueMember = "Value";
+            CboCodigoClassificacaoTributaria.SelectedIndex = -1;
 
             CEST.DataSource = c.getCEST();
             CEST.DisplayMember = "Text";
@@ -72,7 +81,7 @@ namespace NotaEletronica.Forms
 
         private void CarregarDados()
         {
-            if(p.IdNFeProduto > 0)
+            if (p.IdNFeProduto > 0)
             {
                 cProd.Text = p.cProd;
                 cEAN.Text = p.cEAN;
@@ -89,7 +98,7 @@ namespace NotaEletronica.Forms
                 qTrib.Text = Util.Util.ToString(p.qTrib);
                 vUnTrib.Text = Util.Util.ToString(p.vUnTrib);
                 vOutro.Text = Util.Util.ToString(p.vOutro);
-                indTot.SelectedValue = p.indTot == null? -1 : p.indTot;
+                indTot.SelectedValue = p.indTot == null ? -1 : p.indTot;
                 xPed.Text = p.xPed;
                 ICMS_origem.SelectedValue = p.ICMS_origem;
                 ICMS_CST.Text = p.ICMS_CST;
@@ -139,6 +148,9 @@ namespace NotaEletronica.Forms
                 txtcProdANP.Text = p.cProdANP;
                 txtdescANP.Text = p.descANP;
                 txtUFCons.Text = p.UFCons;
+
+                CboCodigoSituacaoTributaria.SelectedValue = Util.Util.ToString(p.ibscbs_cst);
+                CboCodigoClassificacaoTributaria.SelectedValue = Util.Util.ToString(p.ibscbs_cClassTrib);
             }
         }
 
@@ -175,23 +187,23 @@ namespace NotaEletronica.Forms
             if (!string.IsNullOrEmpty(indTot.Text))
             {
                 p.indTot = Convert.ToInt32(indTot.SelectedValue);
-            } 
+            }
             p.xPed = xPed.Text;
             p.ICMS_origem = ICMS_origem.SelectedValue == null ? "" : ICMS_origem.SelectedValue.ToString();
             p.ICMS_CST = ICMS_CST.Text;
             if (!string.IsNullOrEmpty(ICMS_modBC.Text))
             {
                 p.ICMS_modBC = Convert.ToInt32(ICMS_modBC.SelectedValue);
-            } 
+            }
             p.ICMS_redBC = Util.Util.IsNumberZero(ICMS_redBC.Text);
             p.ICMS_vBC = Util.Util.IsNumberZero(ICMS_vBC.Text);
             p.ICMS_pICMS = Util.Util.IsNumberZero(ICMS_pICMS.Text);
             p.ICMS_vICMS = Util.Util.IsNumberZero(ICMS_vICMS.Text);
-            if(!string.IsNullOrEmpty(ICMS_modBCST.Text))
+            if (!string.IsNullOrEmpty(ICMS_modBCST.Text))
             {
                 p.ICMS_modBCST = Convert.ToInt32(ICMS_modBCST.SelectedValue);
             }
-            
+
             p.ICMS_pMVAST = Util.Util.IsNumberZero(ICMS_pMVAST.Text);
             p.ICMS_pRedBCST = Util.Util.IsNumberZero(ICMS_pRedBCST.Text);
             p.ICMS_vBCST = Util.Util.IsNumberZero(ICMS_vBCST.Text);
@@ -229,11 +241,14 @@ namespace NotaEletronica.Forms
             p.ipi_qUnid = Util.Util.IsNumberZero(ipi_qUnid.Text);
             p.ipi_vUnid = Util.Util.IsNumberZero(ipi_vUnid.Text);
 
-            p.cProdANP =  txtcProdANP.Text;
-            p.descANP =  txtdescANP.Text;
-            p.UFCons =  txtUFCons.Text;
+            p.cProdANP = txtcProdANP.Text;
+            p.descANP = txtdescANP.Text;
+            p.UFCons = txtUFCons.Text;
+            p.ibscbs_cst = CboCodigoSituacaoTributaria.SelectedValue == null ? "" : CboCodigoSituacaoTributaria.SelectedValue.ToString();
+            p.ibscbs_cClassTrib = CboCodigoClassificacaoTributaria.SelectedValue == null ? "" : CboCodigoClassificacaoTributaria.SelectedValue.ToString();
 
-            if (p.IdNFeProduto == 0 )
+
+            if (p.IdNFeProduto == 0)
             {
                 dal.Insert(p);
             }
@@ -248,7 +263,7 @@ namespace NotaEletronica.Forms
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if(p.IdNFeProduto > 0)
+            if (p.IdNFeProduto > 0)
             {
                 if (MessageBox.Show("Confirma a exclusão do produto?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {

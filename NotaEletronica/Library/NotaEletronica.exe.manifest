@@ -1,0 +1,1166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="NotaEletronica.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="NotaEletronica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="NotaEletronica.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Boleto.Net.dll" size="1394688">
+      <assemblyIdentity name="Boleto.Net" version="2.0.0.0" publicKeyToken="53630C3583B7ED5C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Hvjd4M7y5h18BJhlL7JWFQTaEHh5+APP90C9GKwTRTI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.CrystalReports.Engine.dll" size="380928">
+      <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dGZgjftY/9C9JCiIYbEGQDz5zMK4mvaVWcIUxyvVW+w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.ReportSource.dll" size="86016">
+      <assemblyIdentity name="CrystalDecisions.ReportSource" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yFR2Om7tOOkzGvSUTN7oeXDOKaRM0tWJi5DyZmK7gWQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Shared.dll" size="884736">
+      <assemblyIdentity name="CrystalDecisions.Shared" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DGym6fg1/+JtvkQ/bMEJriJ9B5hfbDPadtQ2pGkBzag=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Windows.Forms.dll" size="548864">
+      <assemblyIdentity name="CrystalDecisions.Windows.Forms" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>woTBIo7XDQCX5Zce58HXi+4tIfWviNmWPpXYXwn7UhY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="1116760">
+      <assemblyIdentity name="EntityFramework" version="5.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PoNKnbJ6KecCojr5W66/YqltD4tkc9jUL2AUPZPv3LU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlRenderer.dll" size="221696">
+      <assemblyIdentity name="HtmlRenderer" version="1.5.0.5" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>24PfjnyHf/sJFsFMmtbTH9TCfKqM9w/ueA9v7hWoFkA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlRenderer.PdfSharp.dll" size="21504">
+      <assemblyIdentity name="HtmlRenderer.PdfSharp" version="1.5.0.6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vdyV5e7QpopU/PLfqZVIZClm39v5uRlA/wKOHr8Kzb0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="384112">
+      <assemblyIdentity name="Microsoft.SqlServer.Types" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CUDKdDFN88cD8itxx7gM+9N25v7jFUIrwqKI/9gRqqg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NFe_Util_2G.dll" size="1887024">
+      <assemblyIdentity name="NFe_Util_2G" version="4.0.17.2" publicKeyToken="6369240506CE0263" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>q+xrRjjvDqocvLRalxbkZEM/HZpqAnTVpDVPglvPxug=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NotaEletronica.exe" size="633344">
+      <assemblyIdentity name="NotaEletronica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>t6wYgzUyc6xIVZu3nGWkHbhYf7tJzOoCcOao9mEffVk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NReco.PdfGenerator.dll" size="9683456">
+      <assemblyIdentity name="NReco.PdfGenerator" version="1.1.12.0" publicKeyToken="231663D50A41B451" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>cKPuciMoZm0mQNVfsTXvXM/WPBQg8msf1uZSiTclJAI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.dll" size="581632">
+      <assemblyIdentity name="PdfSharp" version="1.32.3057.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wxigZm5aAwUruzKkf/cB9VBYtjYh7UcnVJEG+R0XZ38=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.Charting.dll" size="94208">
+      <assemblyIdentity name="PdfSharp.Charting" version="1.32.3057.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0eigG0ynYMwODSPmc/8ILEDo3QiilqS8OR7cVKRBwvs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.Charting.resources.dll" size="4608">
+      <assemblyIdentity name="PdfSharp.Charting.resources" version="1.32.3057.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wsWPG3XpLdwV8ut6PEzgHe07YHd1BCFcCEel3X5WGvc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.resources.dll" size="5120">
+      <assemblyIdentity name="PdfSharp.resources" version="1.32.3057.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5e4ncMy4a8PPYVRsNJBdHjlpfkuUtJW1j25iS42e/eE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ServiceModelEvents.dll" size="6656">
+      <assemblyIdentity name="ServiceModelEvents" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wqOJoq+DSTgWhr3xMfIJMObCq5rZBzc1l5E9G+Cb5bw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="HTML\Produto.html" size="56168">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qAhHUX4lkW4ec8lGA7NkFM8L3fRCaf1fMJOfvW/c50g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Boleto.Net.dll" size="1394688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Hvjd4M7y5h18BJhlL7JWFQTaEHh5+APP90C9GKwTRTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Boleto.Net.pdb" size="1230336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+g46TakqXd0H16ncWDeCyLuRnbdfT5BpM2AF8Is2wbM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.API.dll" size="28160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>J1k+3dYpwkqYSTkpiZXsI/Yr9/Xq5NBXBUtQWNgumso=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Boleto.dll" size="57344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KOYc3/KNcvQ1r/oSbcUaLAUvWrIIyLz2Ar7R1x620sE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Cripto.dll" size="6656">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kXVhFs7ggYO99u0HiCcKU0ys2oewpG5+QI0xK9CbwHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Danfe.dll" size="120832">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7L/k6TTjL23IGNjz1ybTbdguMt8WSmQE6DVIYe49Zeg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Deploy.dll" size="75264">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mGlwcc+F2olhJ6LzLzcdwbzhHCUWsCHuUkhm96y1Ll8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.dll" size="16384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZIXGYCcjW6JS9Kjg4VnR1notZV4oGKPK+g3i6K/sXqA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Document.dll" size="9728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gLdg6Z5B/a+V7Uho2eDDTDYYR0JmbmV9pYQHQtN0Yzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Email.dll" size="10240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7CumUykQgP1A0D/iDsmSviUHt4GrPJqCKuw9vQyU6tM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Infrastructure.Log.dll" size="13312">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2ViqDnElUBfa6weHF2O24bEvPz93Ur+SPuLZcuRlM24=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Infrastructure.ORM.dll" size="28672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7BStrWg7PgxPvxFth0qWgrhwt3pDKOiJ/y6J7Wipffg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.Nfe.dll" size="39424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hVd7ydP+G9+uNmKE2c4ofWGUPILoLgT/5n/Etdm0vEk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.NoSql.dll" size="45056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9VwvyoYDO9n2lyaOJWtww0BIjo6GmAQo4ZT4YfjlkLw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.NoSql.Repository.dll" size="15360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u+SmBnmtLjZZ2YBWxpFBQhs1iGjOIzglqP+HJvQ7Sr8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Common.StorageBase.dll" size="15360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U8H1c5h2qCYR3lVQRpg7JUYxJm0PKtuJ3z/XctDhkeM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Cadeia Certificados WS\Leiame.txt" size="609">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jlkeRqLVtUryOKfOLbAFLL7fBOyLH5RPhwtch0D7Jsk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Certificados\senhaCertificado.txt" size="436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lgEBFNkjxgwTusQTdJ28LKzS3j6ErNX7PnRQQWL7AVA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\DPEC.xml" size="741" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w6HmGRwrgVnIZ4Uw1fZM80M5gpC0pmV75p1stA8Lju0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Lote-env-lot.xml" size="6154" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uTUr3Cz7zEtrI+Mnx1cwOxWYxLXoeqO7N4BRmfkG90k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe.xml" size="5829" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K1s1pQecJMoSqZEQk3V/tjb9mvetOwgvWnmGyRB+UwU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_assinada.xml" size="6459" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YKjO6eU1p88hp4PJTBtStWbzxw4fvD9UNXiZoAWPB+M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_falhaSchema.xml" size="5832" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mMxWkW5kGicC+FOdFLH3Kkq75uy6Tjuhg/tbPQE2Xn8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135080021635213_v01.07-procInut.xml" size="3742" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5I7/h7m4qY1D/TzyfEwQAQnaIVVuNZ/Smc0xSKfh+Zo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135100021500481_v01.00-procNFe.xml" size="7051" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FhjV/BGUPcrpilg35Ia9rNz/fyTbXDoesejPgYm60NE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135100021635181_v01.00-procNFe.xml" size="6971" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4au3YvcqJAwSri2A6NWpVj0WM2thNpR/p6i9cWUkI5w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135100021635455_v01.07-procCancNFe.xml" size="3680" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z199byR03piOm/SBRU5K7x82d7fnlxN8Q5OTgtIh3xA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135100025211945_v01.00-procNFe.xml" size="6500" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mo3N/r2hPd29HIoI0+XOluqdjqdMWhH497t/eN9W1Pk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\135100026182399_v01.00-procNFe.xml" size="6081" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>t2FHfQv/y38yXR97O2iFZZemUs1KNJxuVFaofoj/LdA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_S10_N000001_v110.xml" size="3726" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GkO8rXq9gXfy6249t8JndpkvdIWnvwxWpO2mnW+rwac=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_S10_N000001_v110_assinada.xml" size="6594" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5+R1xo5Jr/5Rmm1fAZZQD+QP2KEtF0uiSOxxPwQs5VA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_S10_N000001_v110AM.xml" size="3726" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C5T2dPvQ+Ef5Pd3b8DaLgkNx7yrehOAT5TJUbPxcr+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_s10_N000004_v110 - Cópia.xml" size="3204" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>M4sAcxcaa2Gv/+II3pHZP2riU9RHb/JORUgsdmxPyv8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_s10_N000004_v110.xml" size="3197" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bcNC9cG/NbnHSVaJkVJxM3LUZGogA+nf1EX3Z4agl6g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v3.00 (NF-e)\NFe_S10_N000005_v110.xml" size="2760" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rsp87UvhW9QP2ZwN5CeQnDcye2bzH4VhmkjJS1/8TeE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635445_v02.00-procNFe.xml" size="8023" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>evSJhaz9I3wbsh8CGkCBrmkdcjSFCrDjEUkB5HjCuGg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635450_v02.00-procNFe.xml" size="9602" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0VxFN42KC+MUiSjiu7wmOhlvxWzty7iFuMKrQa/6vv4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635453_v02.00-procInutNFe.xml" size="3752" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WBFHkXboQUlYEsVStBXe/6CqRiOzNBvQgjWVmCnFRAs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635460_v01.00-procNFe.XML" size="9602" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7AVkrfNIrQj8eXQmmk++fHWdWTq5YbhgtIgCqphsxY8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635460_v02.00-procNFe.xml" size="9602" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7AVkrfNIrQj8eXQmmk++fHWdWTq5YbhgtIgCqphsxY8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\135100021635462_v02.00-procCancNFe.xml" size="3680" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kQM8tBD8XsQkZliVQxG0XuNSjhjOvHg9zEWsCuWXG8A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_ECF.xml" size="9749" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HNWrPyo1wfwvoa5yHySJZ6g/g8g+5ZgqUHEM8HNz91o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_refNF.xml" size="9752" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QQSRwworbPbeQHN+FIob+LBTgTSTmi7HnDbqjrn5HVM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_S200_N000001_v200.xml" size="9269" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a3HlSQj/l0SiRewE+Ls6ZVI5iRMv11zIA0jS5pL1xc0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_S200_N000001_v200_Assinada.xml" size="10245" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KJwmoIMGtEgKak/RwX91tfiJTX0urz5bWlattjebQHw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_S200_N000006_v200.xml" size="9269" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4FkV2dO7d95mtN4g2tdkZ+Epv6Yqyfgr7F5KHeSdXXI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_S200_N000006_v200_Assinada.xml" size="9909" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pHAo2UHQBCKnDzep4QCI+eiDzd1wnWTjqCAQTwv2dKk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\NFe_Manual_v4.0x (NF-e 2G)\NFe_S200_N000007_v200.txt" size="7062">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hKWeAevpQYyNC4a/AYKSsE0ywKaIHj/SD8Zt3Ul+zjs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 (NF-e)\ModeloNF.TXT" size="2196">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oD82nLC9VaNhGgsAKRB7xuJhe9ZjfPBmxL1Yn7gDJUo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 (NF-e)\ModeloNFTXT.TXT" size="2196">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oD82nLC9VaNhGgsAKRB7xuJhe9ZjfPBmxL1Yn7gDJUo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v3.00 (NF-e)\ModeloNFTXT2.txt" size="2197">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>myOOk6cZ6XYriNmy6kI1tkPUyCyWH/+DCVv0Jvne2Rs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10c.txt" size="974">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>POD9jZWCBd+7LtmpQg8H9qAgmm4x9ZtFgikbbMq3mMs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10c2.txt" size="974">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KAuPqBAUBOtJEDQiDvz9GxyJ85U2z1682JnlK6JJ7tU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10d.txt" size="801">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6cxeMVF8hWU197NTsTYCtGiC11/MTCTv2xvppIw3kL4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10e.txt" size="841">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qle0jHeUDZPd9FpEYV7FuQb6t9CCYkBXIIK9V55rWv8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10f.txt" size="831">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UXdju6iEzMMOBPNgN5JtuV1/P4SzN3LDLAZbMRY8F0E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NF10g.txt" size="810">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dI4mHWq515Mwpmg61HKGiYjc2Ify7uD0beB51hlwyYI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\TXT_NFe_Manual_v4.00x (NF-e 2G)\NFeFCI.txt" size="1132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qfPlGMSgzdAF9cv68vBu2wFzzlOYGFil0giZRYmIM3g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U1WCELl6Uq/mDQp6iBBXBjkCBXieOzpPaMa08NRrT2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_pedido.xml" size="2911" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2VWiDaeCEB+G0bDND/+srjasgK/eDdrjcW9WQ3SU1jI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\CancelaNFe_v107_resposta.xml" size="329" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cBLEKcdMk1GEqtMt3WtwcEhsteCC7htQYehCl+UtUGo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Cancelamento de NFe\procCancNFe_v107.xml" size="3375" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T+Q0tiNsnLl8N9aeX/UNn2y4+uQkTv+xn7uVJM8Hy84=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uKQlH6hdmQQ2Sf96uEazjLoOt10b15PnRqLtiEfRW+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_pedido.xml" size="195" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bn+gShtj5lYNPuKibZEa6+uRV4BOYChEf5SHatKxoBM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Cadastro\ConsultaCadastro_v101_resposta.xml" size="343" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l5NtwdYvFvzui9GTO+RVcv9fkxbpvc/EZ6WP+RiXg6o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JPLZ6Mvsku5i6WxHcDppVFmZZ1K0vTAaR9lRQlNB4zU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_pedido.xml" size="170" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UFNL7kYF9hJx1dNVp7HrB1WQ4xsHUyWE3H76ei5ncCI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta104.xml" size="970" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bGQJMh1GEr/hj2b7qKEpG5nl8h1BtMqd+qDUuhjfsN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta106.xml" size="289" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>71b+baUrgWUnJsA3CCvwpbdUxl5cxaR6wuzmrzG5+jc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\Ws Consulta Resultado Processamento NFe\ConsProcLoteNFe_v110_resposta223.xml" size="350" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SGkICViMQiMYXGEHtKFT1O8yTxt8m8+PhdDXOKwpQ0Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uKQlH6hdmQQ2Sf96uEazjLoOt10b15PnRqLtiEfRW+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_pedido.xml" size="179" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jGcqb2qcsPCMXjwjp9dqvrzL2sEbBXWiUhQyhI8Al0s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Consulta Status\ConsultaStatus_v107_resposta.xml" size="320" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yZ6le7hzPfLtejCjyaqRHjuaCTCBX1KtrjUJKwJVBMY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U1WCELl6Uq/mDQp6iBBXBjkCBXieOzpPaMa08NRrT2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_pedido.xml" size="224" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fBknDUvLjGVyJ/Y7qgZth7/rg6tATvAOsq6jiAhlvDw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS ConsultaNFe\ConsultaNFe_v107_resposta.xml" size="313" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RH+74Dm6JWwcyYvKJaDDDC/h8gWqsEYWYIYqztqE37g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_cabec.xml" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JPLZ6Mvsku5i6WxHcDppVFmZZ1K0vTAaR9lRQlNB4zU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_pedido.xml" size="12595" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/4GmjPaz5HM444oyMZNV7SPQnLLAh/UK9pToryPvouQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS EnviaNFe\EnvLoteNFe_v110_resposta.xml" size="361" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>D3Kx0+NEvHB+jauieylEN9wyL0ENteITTa7ABuVnAic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_cabec.XML" size="150" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U1WCELl6Uq/mDQp6iBBXBjkCBXieOzpPaMa08NRrT2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_pedido.XML" size="2939" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3BKnMx4vLcibJxk3D3GzP/xnXWfeVmm0vNtgk9XqfbA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\InutilizaNumeroNFe_v107_resposta.XML" size="329" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PH4J73rc/sS34lxe18HVJdoejs7A96Z5oSMTjpPUICw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\WS Inutiliza Numeração\procInutNFe_v107.XML" size="3460" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qMK4nsrt2GdOQmHfXLrfUawsWfIXsN0GFx/orj4Vc9o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Exemplos de XML\XML_DPEC\DPEC.xml" size="741" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w6HmGRwrgVnIZ4Uw1fZM80M5gpC0pmV75p1stA8Lju0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\NFe_Util_2G.dll" size="1887024">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>q+xrRjjvDqocvLRalxbkZEM/HZpqAnTVpDVPglvPxug=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\URL\ws.xml" size="46797" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1SLo2HPi6ipYtyEpQWK0uVZBANG3BlOhUE/BdNrjKJY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\URL\ws2.xml" size="63275" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U+6n/ibkyBUjX8uvZTkapPZA7UJ3FJMVJ1n1LIhie3w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\URL\ws3.xml" size="60342" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Js5rOsEKeJgplc8AyPtpKSt2NS5mppfqscR1AytU0NI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\URL\ws4.xml" size="66334" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xh8S/qRNoNZTUEZ4PfU0JXGUCDhmg8nqpkyhrp4r1Zw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\URL\wsSCAN.xml" size="28502" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q0DyJHDvwm+dQQH2M1CLXv5mMjWSe7vONVjQ2BR0XvM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Utils\CertFlex.exe" size="377200">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>b/dQmNSf26Nf/OUlofh+RVClhhIFCjWplMTzARmGKCk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Utils\leiame.txt" size="0">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Utils\RegistryTypeLibraries.dll" size="28672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BjM7t/WZytI3J5L/QzXi0oIWotR39h0lB1NlNcjj00M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util\Utils\TypeLibBrowser.exe" size="32768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>b/j5re6Ogat+4Pf9VSYpNLCmJnw1wvW8f5x8Fh2R/mk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\NFe_Util_2G.dll" size="1887024">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>q+xrRjjvDqocvLRalxbkZEM/HZpqAnTVpDVPglvPxug=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\Reports.dll" size="809096">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OvdnyXgWcaZGt0u/AHE16JmFpJKvQQUVhqwcl0ch4XM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Library\SqlServerSpatial110.dll" size="778432">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GVi0+tK3lV9mZz5VKqtQ+H0Vuo2B6S46i2WQjTXUCM0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="NotaEletronica.exe.config" size="2532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ldQ9asR8API71cUt5HM7l4Ok51+w06dbw/D3FiiV+Ko=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x64\SqlServerSpatial110.dll" size="768088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NqUOfIA37JPqPsLYKJo7XGSZtxuZ4ryDh/ePfhoLLDM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x86\SqlServerSpatial110.dll" size="521816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WAx2UUUVQC5SOUZEc7KjjC3gSYneviu+DWR+GIEqfcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SumatraPDF.exe" size="6481040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kYCMMLR1n+lbUzPvGe0WVyaOtFeYUEkhM/pxwEod7rQ=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

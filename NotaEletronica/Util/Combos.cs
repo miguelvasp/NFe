@@ -112,6 +112,16 @@ namespace NotaEletronica.Util
             return new CESTDAL().Get().OrderBy(X => X.Cest).Select(x => new ComboItem() { Text = x.Cest, Value = x.Cest }).ToList();
         }
 
+        public List<ComboItem> getCodigoClassificacaoTributaria()
+        {
+            return new CodigoClassificacaoTributariaDAL().Get().OrderBy(X => X.Codigo).Select(x => new ComboItem() { Text = x.Nome, Value = x.Codigo }).ToList();
+        }
+
+        public List<ComboItem> getCodigoSituacaoTributaria()
+        {
+            return new CodigoSituacaoTributariaDAL().Get().OrderBy(X => X.Codigo).Select(x => new ComboItem() { Text = x.Nome, Value = x.Codigo }).ToList();
+        }
+
         public List<ComboItem> getCFOP()
         {
             return new CFOPDAL().Get().OrderBy(X => X.CFOPCOD).Select(x => new ComboItem() { Text = x.CFOPCOD, Value = x.CFOPCOD }).ToList();

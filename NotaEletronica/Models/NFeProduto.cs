@@ -275,5 +275,9 @@ namespace NotaEletronica.Models
         [Column("UFCons")]
         public string UFCons { get; set; }
 
+        [Column("ibscbs_cst")]
+        public string ibscbs_cst { get; set; }
+        [Column("ibscbs_cClassTrib")]
+        public string ibscbs_cClassTrib { get; set; }
     }
 }

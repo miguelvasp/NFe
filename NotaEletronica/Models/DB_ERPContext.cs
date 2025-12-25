@@ -45,7 +45,9 @@ namespace NotaEletronica.Models
         public DbSet<CFOP> CFOP { get; set; }
         public DbSet<Pais> Pais { get; set; }
         public DbSet<NCM> NCM { get; set; }
- 
+        public DbSet<CodigoClassificacaoTributaria> CodigoClassificacaoTributaria { get; set; }
+        public DbSet<CodigoSituacaoTributaria> CodigoSituacaoTributaria { get; set; }
+
         public DbSet<NFeEmail> NFeEmail { get; set; }
         public DbSet<NFeInutiliza> NFeInutiliza { get; set; }
 
