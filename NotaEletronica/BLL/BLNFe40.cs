@@ -1152,7 +1152,39 @@ namespace NotaEletronica.BLL
 
                     string IS = "";
 
-                    string IBSCBS = dll.IBSCBSv130(i.ibscbs_cst, i.ibscbs_cClassTrib, "", "", "", "");
+                    // Base IBS/CBS do item (ajuste se sua regra incluir/outros compondo a base)
+                    double vBC_IBSCBS = vProd + vFrete + vSeg + vOutro - vDesc;
+
+                    // Em 2026: IBS-UF = 0,1% e CBS = 0,9% (piloto RTC / validações 1026 e correlatas)
+                    double pIBSUF = 0.10;   // percentual (0,10%)
+                    double pIBSMun = 0.00;  // percentual
+                    double pCBS = 0.90;     // percentual (0,90%)
+
+                    // Valores calculados (2 casas; SEFAZ é chata com arredondamento)
+                    double vIBSUF = Math.Round(vBC_IBSCBS * (pIBSUF / 100.0), 2);
+                    double vIBSMun = Math.Round(vBC_IBSCBS * (pIBSMun / 100.0), 2);
+                    double vIBS = Math.Round(vIBSUF + vIBSMun, 2);
+                    double vCBS = Math.Round(vBC_IBSCBS * (pCBS / 100.0), 2);
+
+                    // Grupos (sem diferimento, sem devolução, sem redução)
+                    string gIBSUF = dll.gIBSUF(pIBSUF, 0.0, 0.0, 0.0, 0.0, 0.0, vIBSUF);
+                    string gIBSMun = dll.gIBSMun(pIBSMun, 0.0, 0.0, 0.0, 0.0, 0.0, vIBSMun);
+                    string gCBS = dll.gCBS(pCBS, 0.0, 0.0, 0.0, 0.0, 0.0, vCBS);
+
+                    // gTributo = gIBSCBS (mesmo no CST 410, isso é o que mata a rejeição 1026 em 2026)
+                    //string gTributo = dll.gIBSCBSv130(vBC_IBSCBS, gIBSUF, gIBSMun, vIBS, gCBS, "", "");
+
+                    string gTributo = "";
+
+                    // CST que NÃO exigem (e NÃO permitem) grupo de tributação:
+                    if (i.ibscbs_cst != "410" && i.ibscbs_cst != "810" && i.ibscbs_cst != "830")
+                    {
+                        // aqui você calcula vBC/pIBSUF/pCBS/etc e monta gTributo
+                        gTributo = dll.gIBSCBSv130(vBC_IBSCBS, gIBSUF, gIBSMun, vIBS, gCBS, "", "");
+                    }
+
+                    // Agora sim: IBSCBS completo
+                    string IBSCBS = dll.IBSCBSv130(i.ibscbs_cst, i.ibscbs_cClassTrib, "", gTributo, "", "");
 
                     double ValorTotalImpostos = Convert.ToDouble(i.ICMS_vICMS + i.PIS_vPis + i.COFINS_vCofins + i.IPI_vIPI);
 
@@ -1209,10 +1241,10 @@ namespace NotaEletronica.BLL
                                               0.00,
                                               0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
 
+                var IBSCBSTotv = dll.IBSCBSTotv130(0, "", "", "", "");
 
-
-                string total = dll.totalRTC(totalICMS, "", "", 0.00, "", Convert.ToDouble(tot_vNF));
-                return "<total>" + totalICMS + "</total>";
+                string total = dll.totalRTC(totalICMS, "", "", 0.00, IBSCBSTotv, Convert.ToDouble(tot_vNF));
+                return total;
             }
             catch (Exception ex)
             {
