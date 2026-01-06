@@ -1156,9 +1156,9 @@ namespace NotaEletronica.BLL
                     double vBC_IBSCBS = vProd + vFrete + vSeg + vOutro - vDesc;
 
                     // Em 2026: IBS-UF = 0,1% e CBS = 0,9% (piloto RTC / validações 1026 e correlatas)
-                    double pIBSUF = 0.10;   // percentual (0,10%)
+                    double pIBSUF = 0.00;   // percentual (0,10%)
                     double pIBSMun = 0.00;  // percentual
-                    double pCBS = 0.90;     // percentual (0,90%)
+                    double pCBS = 0.00;     // percentual (0,90%)
 
                     // Valores calculados (2 casas; SEFAZ é chata com arredondamento)
                     double vIBSUF = Math.Round(vBC_IBSCBS * (pIBSUF / 100.0), 2);
